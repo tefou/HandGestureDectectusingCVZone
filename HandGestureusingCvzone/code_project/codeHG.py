@@ -15,6 +15,8 @@ while True:
         lmlist = hands[0]
         figerUp= detection.fingersUp(lmlist)
         print(figerUp)
+        
+        #We hypothesize that finger-based cheating may be occurring in this exam setting, whereby students signal their chosen multiple-choice answer (A, B, C, or D) using their fingers.
         if figerUp==[0,0,0,0,0]:
             cv2.putText(frame,'Frame Count = 0',(20,460),cv2.FONT_HERSHEY_COMPLEX,0.5,(255,255,255),1,cv2.LINE_AA)
             cv2.putText(frame, 'Warning', (440, 460), cv2.FONT_HERSHEY_COMPLEX, 0.5, (255, 255, 255), 1,cv2.LINE_AA)
